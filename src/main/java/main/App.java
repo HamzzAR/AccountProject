@@ -8,6 +8,7 @@ public class App {
 		
 		Account acc = new Account("Hamza","Razeq");
 		Account acc2 = new Account("Ali","Azi");
+		
 		service.addAccount(acc);
 		service.addAccount(acc2);
 		
