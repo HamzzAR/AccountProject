@@ -8,9 +8,7 @@ public class Account {
 		this.firstName = firstName;
 		this.lastName = lastName;
 	}
-	
-	
-	
+
 	public String getFirstName() {
 		return firstName;
 	}

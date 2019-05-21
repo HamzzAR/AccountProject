@@ -8,6 +8,7 @@ public class App {
 		
 		Account acc = new Account("Hamza","Razeq");
 		Account acc2 = new Account("Ali","Azi");
+		
 		service.addAccount(acc);
 		service.addAccount(acc2);
 		
@@ -17,7 +18,7 @@ public class App {
 		System.out.println(service.getAccount(2).getFirstName());
 		System.out.println(acc2.getAccountNumber());
 		
-		
+		System.out.println(service.convertMapToJSONObject());
 	}
 
 	public static void main(String[] args) {
