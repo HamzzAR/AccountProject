@@ -1,6 +1,7 @@
 package main;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Map.Entry;
 
 import org.json.JSONObject;
 
@@ -24,7 +25,14 @@ public class Service {
 	}
 
 	public Integer getAccountsByName(String string) {
-		return 0;
+		int res = 0;
+		for (Entry<Integer, Account> entry : accounts.entrySet()) {
+			if(entry.getValue().getFirstName().equals(string)) {
+				res++;
+			}
+		}
+		
+		return res;
 	}
 	
 	
