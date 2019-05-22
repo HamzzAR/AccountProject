@@ -1,4 +1,4 @@
-package main;
+package domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -36,6 +36,12 @@ public class Account {
 	}
 	public int getAccountNumber() {
 		return accountNumber;
+	}
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
 	
 

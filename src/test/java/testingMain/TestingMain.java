@@ -1,12 +1,13 @@
 package testingMain;
 
-import main.Account;
-import main.Service;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
+import domain.Account;
+import repo.AccountRepoMap;
+
 public class TestingMain {
-	private Service service  = new Service();
+	private AccountRepoMap service  = new AccountRepoMap();
 	
 	@Test
 	public void getAccountsByNameTest() {

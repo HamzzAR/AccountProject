@@ -1,10 +1,13 @@
 package main;
 
+import domain.Account;
+import repo.AccountRepoMap;
+
 public class App {
 
 	public App() {
 		System.out.println("Hello World to the standard out");
-		Service service = new Service();
+		AccountRepoMap service = new AccountRepoMap();
 		
 		Account acc = new Account("Hamza","Razeq");
 		Account acc2 = new Account("Ali","Azi");
@@ -17,8 +20,7 @@ public class App {
 		
 		System.out.println(service.getAccount(2).getFirstName());
 		System.out.println(acc2.getAccountNumber());
-		
-		System.out.println(service.convertMapToJSONObject());
+
 	}
 
 	public static void main(String[] args) {
