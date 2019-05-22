@@ -5,7 +5,6 @@ import java.util.Map.Entry;
 
 import org.json.JSONObject;
 
-import org.json.JSONObject;
 
 public class Service {
 	private Map<Integer,Account> accounts = new HashMap<Integer, Account>();
@@ -19,11 +18,6 @@ public class Service {
 
 	public Account getAccount(int accountNumber) {
 		return accounts.get(accountNumber);
-	}
-	
-	public JSONObject convertMapToJSONObject() {
-		JSONObject obj = new JSONObject(accounts);
-		return obj;
 	}
 
 	public Integer getAccountsByName(String string) {

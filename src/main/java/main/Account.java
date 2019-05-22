@@ -1,8 +1,24 @@
 package main;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Account {
-	private String firstName,lastName;
+	@Id @GeneratedValue(strategy=GenerationType.AUTO)
 	private int accountNumber;
+
+	@Column(length = 20)
+	private String firstName;
+	@Column(length = 20)
+	private String lastName;
+	
+	public Account() {
+		
+	}
 	
 	public Account(String firstName, String lastName) {
 		this.firstName = firstName;
