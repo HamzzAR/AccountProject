@@ -1,6 +1,7 @@
 package main.rest;
 
 import javax.inject.Inject;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -33,5 +34,31 @@ public class AccountEndPoint {
 	public String getAccount(@PathParam("id") Integer id) {
 		return service.getAccount(id);
 	}
+	
+	@Path("/deleteAccount/{id}")
+	@DELETE
+	@Produces(MediaType.APPLICATION_JSON)
+	public String deleteAccount(@PathParam("id") Integer id) {
+		return service.deleteAccount(id);
+	}
+	
+	@Path("/getAllAccounts")
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	public String getAllAccounts() {
+		return service.getAllAccounts();
+	}
+	
+	@Path("/updateAccount")
+	@POST
+	@Produces({ "application/json" })
+	public String updateAccount(String account) {
+		return service.updateAccount(account);
+	}
+
+	
+	
+	
+	
 }
  

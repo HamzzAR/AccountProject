@@ -32,5 +32,17 @@ public class AccountService {
 		return this.json.convertToJSON(this.repo.getAccount(number));
 	}
 	
+	public String deleteAccount(int number) {
+		return this.repo.deleteAccount(number);
+	}
+	
+	public String getAllAccounts() {
+		return this.repo.getAllAccounts();
+	}
+	
+	public String updateAccount(String account) {
+		return this.repo.updateAccount(account);
+	}
+	
 
 }

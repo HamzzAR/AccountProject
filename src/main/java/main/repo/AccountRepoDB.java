@@ -25,7 +25,6 @@ public class AccountRepoDB implements AccountRepo{
 	private ToJSON util;
 
 	
-	
 	@Override
 	@Transactional(REQUIRED)
 	public String addAccount(String account) {
@@ -50,9 +49,19 @@ public class AccountRepoDB implements AccountRepo{
 	}
 
 	@Override
-	public Account updateAccount(int id, Account account) {
+	@Transactional(REQUIRED)
+	public String updateAccount(String account) {
+		Account updated = util.convertFromJSON(account, Account.class);
+		Account found = getAccount(updated.getAccountNumber());
 		
-		return manager.merge(account);
+		
+		found.setFirstName(updated.getFirstName());
+		found.setLastName(updated.getLastName());
+		
+		//addAccount(util.convertToJSON(found));
+		manager.merge(found);
+		
+		return "{\"message\": \"account has been sucessfully updated!\"}";
 	}
 
 	@Override
