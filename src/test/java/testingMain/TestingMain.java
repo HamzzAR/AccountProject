@@ -3,8 +3,8 @@ package testingMain;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
-import domain.Account;
-import repo.AccountRepoMap;
+import main.domain.Account;
+import main.repo.AccountRepoMap;
 
 public class TestingMain {
 	private AccountRepoMap service  = new AccountRepoMap();
