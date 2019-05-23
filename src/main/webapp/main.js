@@ -22,12 +22,18 @@ function searchAccount(){
 		type: "GET",
 		url: "http://localhost:8080/AccountApplication-0.0.1-SNAPSHOT/rest/account/" +
 				"getAccount/"+`${ $('#idd').val()}`,
-		
-		success: function(msg) { 
-			alert('account has been sucessfully added');
+		var d = "";
+		function(data){
+			 //$('#idd').val() = 
+			d = data;
 		}
+		
+		
+	  
 	
 	});
+	
+	alert("hellop");
 	
 	
 }
