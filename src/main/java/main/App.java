@@ -1,7 +1,7 @@
 package main;
 
-import domain.Account;
-import repo.AccountRepoMap;
+import main.domain.Account;
+import main.repo.AccountRepoMap;
 
 public class App {
 
